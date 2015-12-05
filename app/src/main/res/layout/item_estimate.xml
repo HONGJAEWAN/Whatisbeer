@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="allthatbeer.android.beer.com.whatisbeer.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<android.support.v7.widget.CardView
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:id="@+id/item_estimate"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="10dp"
+
+    >
+    <android.support.percent.PercentRelativeLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+<android.support.v7.widget.CardView
+    android:id="@+id/est_label"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="10dp"
+
+    >
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:id="@+id/est_Img"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/label_hei"
+
+        />
+
+
+</android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/est_kname"
+            android:text="하이네켄"
+            android:textSize="20sp"
+            android:layout_toRightOf="@id/est_label"
+            />
+        <TextView
+            android:id="@+id/est_eName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/est_kname"
+            android:layout_toRightOf="@id/est_label"
+            android:text="Heineken"/>
+
+        <RatingBar
+            android:id="@+id/est_Rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/est_label"
+            android:layout_below="@id/est_eName"/>
+    </android.support.percent.PercentRelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</android.support.percent.PercentRelativeLayout>

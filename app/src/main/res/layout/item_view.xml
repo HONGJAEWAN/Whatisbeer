@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="allthatbeer.android.beer.com.whatisbeer.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+<android.support.v7.widget.CardView
+    android:id="@+id/item_card"
+    app:layout_widthPercent="100%"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardElevation="5dp"
+    >
+<android.support.percent.PercentRelativeLayout
+    android:padding="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+            <android.support.v7.widget.CardView
+
+                android:id="@+id/label_card"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                app:cardElevation="5dp"
+                app:cardCornerRadius="10dp"
+                >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/reply_label"
+                android:src="@drawable/label_hei"
+                android:layout_gravity="center_vertical"
+                />
+</android.support.v7.widget.CardView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reply_bname"
+        android:text="하이네켄"
+        android:textSize="20sp"
+       android:layout_toRightOf="@id/label_card" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="rlovenara"
+        android:id="@+id/reply_id"
+        android:layout_toRightOf="@id/label_card"
+        android:layout_below="@id/reply_bname"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="챔스 보면서 먹으면 정말 꿀맛!"
+        android:id="@+id/reply_content"
+        android:layout_below="@id/reply_id"
+        android:layout_toRightOf="@id/label_card"/>
+
+
+
+</android.support.percent.PercentRelativeLayout>
+</android.support.v7.widget.CardView>
+    </android.support.percent.PercentRelativeLayout>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        card_view:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <android.support.v7.widget.CardView
+           android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/cardview"
+            card_view:cardElevation="5dp"
+            card_view:cardCornerRadius="10dp"
+           >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:id="@+id/todayLayout"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="오늘의 추천 맥주"
+                    android:id="@+id/todayText"
+                    android:textSize="24sp"
+                    android:layout_margin="10dp"
+                     />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/img_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    card_view:cardElevation="5dp"
+                    card_view:cardCornerRadius="10dp"
+                    android:layout_below="@+id/todayText"
+                    >
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="120dp"
+                        android:id="@+id/todayImg"
+                        android:layout_alignParentLeft="true"
+                        android:src="@drawable/label_hei"
+                        android:layout_below="@+id/todayText"
+                        />
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/todayKname"
+                    android:text="하이네켄"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:layout_below="@+id/todayText"
+                    android:layout_toRightOf="@+id/img_label"
+                    android:layout_toEndOf="@+id/img_label"
+                    android:layout_marginLeft="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Heineken"
+                    android:id="@+id/todayEname"
+                    android:layout_below="@+id/todayKname"
+                    android:layout_toRightOf="@+id/img_label"
+                    android:layout_toEndOf="@+id/img_label"
+                    android:layout_marginLeft="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/todayEname"
+                    android:layout_toRightOf="@+id/img_label"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/img_linear">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/todayCImg"
+                        android:src="@drawable/bel_circle"
+                        android:layout_weight="1"
+                        />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/todayStyle"
+                        android:src="@drawable/type"
+                        android:layout_weight="1"
+                        />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/todayAbv"
+                        android:src="@drawable/percent1"
+                        android:layout_weight="1"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_linear"
+                    android:orientation="horizontal"
+                    android:layout_toRightOf="@+id/img_label"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="벨기에"
+                        android:id="@+id/todayCname"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="흑맥주"
+                        android:gravity="center"
+                        android:id="@+id/todaySname"
+                        android:layout_weight="1"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="5%"
+                        android:gravity="center"
+                        android:id="@+id/todayABVPoint"
+                        android:layout_weight="1"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/reply_cardview"
+        card_view:cardElevation="5dp"
+        card_view:cardCornerRadius="10dp"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comment"
+            android:textSize="24sp"
+            android:layout_margin="10dp"
+            android:id="@+id/comment"
+            />
+        <android.support.v7.widget.RecyclerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        />
+
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
